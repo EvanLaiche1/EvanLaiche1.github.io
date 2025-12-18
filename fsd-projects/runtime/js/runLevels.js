@@ -21,7 +21,10 @@ var runLevels = function (window) {
     function createSawBlade(x,y){
     var hitzonesSize = 20;
     var damageFromObstscale = 35;
-    var sawBladeZone = game.createObstacale(hitzonesSize, damageFromObstscale);
+    var sawBladeZone = game.createObstacale(
+      hitzonesSize, 
+      damageFromObstscale
+    );
     sawBladeHitZone.x = y;
     sawBladeHitZone.y = y;
     game.addGameItem(sawBladeHitZone);
@@ -29,11 +32,10 @@ var runLevels = function (window) {
     sawBladeZone.addChild(obstacleImage);
     obstacle.x = -25
     obstacle.y = -22
-
     }
-    //createSawBlade(500, 220)
-    //createSawBlade(900, 275)
-    //createSawBlade(1200, 300)
+    createSawBlade(500, 220)
+    createSawBlade(900, 275)
+    createSawBlade(1200, 300)
     function createEnemy(x, y) {
     var enemy = game.createGameItem("enemy", 25);
     var redSquare = draw.rect(50, 50, "red");
@@ -43,8 +45,10 @@ var runLevels = function (window) {
     enemy.x = x;
     enemy.y = y;
     game.addGameItem(enemy);
-
     }
+
+
+    
      
 
     function startLevel() {
